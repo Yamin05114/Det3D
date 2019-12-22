@@ -24,7 +24,8 @@ class AnchorGeneratorStride:
         self._class_name = class_name
         self._match_threshold = match_threshold
         self._unmatch_threshold = unmatch_threshold
-
+    
+    # class name as a property this is only for 3d anchors
     @property
     def class_name(self):
         return self._class_name
