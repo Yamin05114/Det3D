@@ -16,6 +16,8 @@ from det3d.core.bbox.geometry import (
 import copy
 
 
+# 因为sample的方式跟Torch的dataset有点区别所以可能需要自己造轮子
+# 主要针对ds sampling
 class BatchSampler:
     def __init__(
         self, sampled_list, name=None, epoch=None, shuffle=True, drop_reminder=False
