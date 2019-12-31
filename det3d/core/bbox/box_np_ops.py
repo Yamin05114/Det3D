@@ -628,6 +628,7 @@ def get_frustum_v2(bboxes, C, near_clip=0.001, far_clip=100):
     return ret_xyz
 
 
+# 基于stride建立anchors
 def create_anchors_3d_stride(
     feature_size,
     sizes=[1.6, 3.9, 1.56],
@@ -679,7 +680,7 @@ def create_anchors_3d_stride(
     ret = np.concatenate(rets, axis=-1)
     return np.transpose(ret, [2, 1, 0, 3, 4, 5])
 
-
+# 2D anchor
 def create_anchors_bev_stride(
     feature_size,
     sizes=[1.6, 3.9],
